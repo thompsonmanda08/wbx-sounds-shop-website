@@ -168,8 +168,8 @@ span.text-red {
 }
 .hero-banner-container h1 {
   color: white;
-  font-size: 10em;
-  margin-left: -20px;
+  font-size: clamp(5em, 5em + 2vw, 10em);
+  margin-left: -5px;
   text-transform: uppercase;
 }
 .hero-banner-image {
@@ -216,60 +216,90 @@ span.text-red {
   font-weight: 200;
 }
 .footer-banner-container {
-  padding: 100px 40px;
+  padding: 50px 40px;
   background-color: #f02d34;
   border-radius: 15px;
   position: relative;
-  height: 400px;
   line-height: 1;
   color: white;
   width: 100%;
-  margin-top: 120px;
+  margin-top: 9rem;
+  margin-bottom: 5rem;
 }
 .banner-desc {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
+  z-index: 1;
 }
+
 .banner-desc button {
-  border-radius: 15px;
-  padding: 10px 16px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  padding: 0.9rem 2rem;
   background-color: white;
   color: red;
   border: none;
-  margin-top: 40px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
+  margin-top: 2.2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
+
+.banner-desc button:hover {
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  outline: 1px solid white;
+}
+
 .banner-desc .left h3 {
   font-weight: 900;
   font-size: 80px;
-  margin-left: 25px;
+  margin-left: 15px;
 }
 .banner-desc .left p {
   margin: 18px;
+  font-weight: 700;
 }
+
 .footer-banner-image {
   position: absolute;
-  /* top: -35%;
-  left: 8%; */
-  top: -25%;
+  max-width: 550px;
+  width: 100%;
+  object-fit: contain;
+  top: -55%;
   left: 25%;
+  z-index: -1;
 }
+
 .banner-desc .right {
   line-height: 1.4;
 }
 .banner-desc .right h3 {
   font-weight: 800;
-  font-size: 60px;
+  font-size: 4rem;
 }
 .banner-desc .right p {
-  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 .banner-desc .right .company-desc {
   font-size: 14px;
   font-weight: 300;
 }
+
 .cart-wrapper {
   width: 100vw;
   background: rgba(0, 0, 0, 0.5);
@@ -628,9 +658,11 @@ span.text-red {
     right: -6%;
   }
   .footer-banner-container {
-    height: 560px;
+    height: unset;
     margin-top: 80px;
+    padding: 1rem;
   }
+
   .footer-banner-image {
     width: 77%;
     left: 30%;
@@ -658,6 +690,16 @@ span.text-red {
     flex-wrap: wrap;
     gap: 20px;
   }
+
+  .banner-desc .right {
+    margin-top: 2rem;
+  }
+
+  .banner-desc span img {
+    position: static;
+    max-width: 420px;
+  }
+
   .hero-banner-container {
     line-height: 1.3;
   }

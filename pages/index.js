@@ -19,7 +19,7 @@ const HomePage = ({ products, bannerData }) => {
           )
         )}
       </div>
-      <FooterBanner footerBanner={bannerData.length && bannerData[0]} />
+      <FooterBanner footerBanner={bannerData.length && bannerData[1]} />
     </div>
   );
 };
