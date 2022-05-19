@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <div className="layout">
       <Head>
-        <title>WebbX-Store</title>
+        <title>WBX-Sounds</title>
       </Head>
       <header>
         <Navbar />
