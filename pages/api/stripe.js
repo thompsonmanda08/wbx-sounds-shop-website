@@ -1,7 +1,10 @@
 import React from "react";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
+const mySecretKey = process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY.toString();
+
+//initialize a Stripe session from secret key
+const stripe = new Stripe(mySecretKey);
 
 export default async function handler(req, res) {
   //req => REQUEST and res => RESPONSE
