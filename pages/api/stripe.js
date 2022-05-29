@@ -1,7 +1,7 @@
 import React from "react";
 import Stripe from "stripe";
 
-const mySecretKey = process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY.toString();
+const mySecretKey = `${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`;
 
 //initialize a Stripe session from secret key
 const stripe = new Stripe(mySecretKey);
