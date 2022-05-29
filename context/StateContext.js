@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import toast, { Toaster } from "react-hot-toast";
 
 const Context = createContext();
 
@@ -34,8 +33,6 @@ export const StateContext = ({ children }) => {
       product.quantity = quantity;
       setCartItems([...cartItems, { ...product }]);
     }
-
-    toast.success(`${qty} ${product.name} added to the cart`);
   };
 
   const onRemoveFromCart = (product) => {
