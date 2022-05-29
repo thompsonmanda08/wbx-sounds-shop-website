@@ -14,7 +14,7 @@ const Success = () => {
     setTotalPrice(0);
     setTotalQuantities(0);
     runFireWorks();
-  }, []);
+  });
 
   return (
     <div className="success-wrapper">
