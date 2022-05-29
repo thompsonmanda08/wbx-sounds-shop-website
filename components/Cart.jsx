@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useRef } from "react";
-import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
 import { TiDeleteOutline } from "react-icons/ti";
 import {
@@ -37,7 +37,9 @@ const Cart = () => {
 
     const data = await response.json();
 
-    toast.loading("Redirecting");
+    {
+      /*toast.loading("Redirecting");*/
+    }
 
     stripe.redirectToCheckout({ sessionId: data.id });
   };
