@@ -114,7 +114,6 @@ export const getStaticProps = async ({ params: { slug } }) => {
   // we need to extra '' e.g '${variable}' to convert the VARIABLE to a string
   // We then use indexing to access the the First Element of the returned ARRAY.
   const productQuery = `*[_type == "product" && slug.current == '${slug}'][0]`;
-
   const productsQuery = '*[_type == "product"]';
 
   const product = await client.fetch(productQuery);
